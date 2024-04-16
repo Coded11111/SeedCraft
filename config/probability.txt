@@ -1,0 +1,13 @@
+The probability of generating a valid seed phrase depends on the quality of the word list (dictionary) used and the length of the seed phrase.
+In the program we use a list of words from the file `bip39.txt`, which, as a rule, contains words from the BIP-39 standard,
+used to create mnemonic seed phrases in cryptocurrency wallets.
+
+The BIP-39 standard provides for the use of 2048 different words.
+If the seed phrase is, for example, 12 words long (which is standard for many cryptocurrency wallets),
+then the total number of possible combinations will be 2048^12, which is a very large number.
+
+However, it is worth considering that the generation of seed phrases in the program is carried out by randomly selecting words from a list.
+This means that as a result of such generation, both valid and invalid seed phrases can be generated.
+
+Thus, the probability of generating a valid seed phrase in this program will depend on
+how randomly and evenly words are selected from the list, as well as the size of the list of words and the length of the seed phrase itself.
